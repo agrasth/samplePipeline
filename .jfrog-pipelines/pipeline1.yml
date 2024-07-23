@@ -10,7 +10,7 @@ pipelines:
           onExecute:
             - pushd $res_resource_pipelines_resourcePath
             - pwd
-            - ./script.sh # copy contents for script.sh file
+            - ls
             - popd
             - ls
             - pwd
