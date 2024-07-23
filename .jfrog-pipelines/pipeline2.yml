@@ -24,6 +24,6 @@ pipelines:
         configuration:
           inputResources:
             - name: resource_pipelines
-          execution:
-            onExecute:
-              - echo "hello world"
+        execution:
+          onExecute:
+            - echo "hello world"
