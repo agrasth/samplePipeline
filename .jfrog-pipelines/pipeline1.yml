@@ -6,13 +6,13 @@ resources:
       path: agrasth/samplePipeline #rename to your repo name
 pipelines:
   - name: test
-    type: Bash
+    # type: Bash
     configuration:
       - inputResources:
           - name: resource_pipelines
     steps:
       - name: execute_script
-        # type: Bash
+        type: Bash
         # configuration:
         #   inputResources:
         #     - name: resource_pipelines
