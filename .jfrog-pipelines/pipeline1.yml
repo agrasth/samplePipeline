@@ -8,8 +8,8 @@ pipelines:
   - name: test
     # type: Bash
     configuration:
-      - inputResources:
-          - name: resource_pipelines
+      inputResources:
+        - name: resource_pipelines
     steps:
       - name: execute_script
         type: Bash
