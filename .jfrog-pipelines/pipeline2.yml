@@ -6,7 +6,7 @@
 #      path: agrasth/samplePipeline #rename to your repo name 
 
 pipelines:
-  - name: pipelines_build
+  - name: testConditional_resource
     configuration:
       # Set the inputResources conditionally based on the branch
       {{ if eq "master" "{{gitBranch}}" }}
