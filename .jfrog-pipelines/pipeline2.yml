@@ -2,7 +2,7 @@ pipelines:
   - name: testConditional_resource
     configuration:
       # Set the inputResources conditionally based on the branch
-      {{ if eq "master" "{{gitBranch}}" }}
+      {{ if eq "main" "{{gitBranch}}" }}
       inputResources:
         - name: resource_pipelines
           trigger: true
