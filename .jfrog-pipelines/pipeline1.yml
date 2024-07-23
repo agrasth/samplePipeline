@@ -13,5 +13,6 @@ pipelines:
             - ls
             - pushd test
             - ./script.sh
+            - popd
             
             
