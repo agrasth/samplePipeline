@@ -1,0 +1,15 @@
+ - name: resource_pipelines
+   type: GitRepo
+   configuration:
+     gitProvider: github_agrasth #rename to your integration name
+     path: agrasth/samplePipeline #rename to your repo name 
+pipelines:
+  - name: test
+    type: Bash
+    configuration:
+      - inputResources:
+        - name: resource_pipelines
+    execution:
+    - onExecute:
+      - pushd $res_resource_pipelines_resourcePath
+      - ./script.sh # copy contents for script.sh file
