@@ -12,4 +12,9 @@ pipelines:
             - pwd
             - ./script.sh # copy contents for script.sh file
             - popd
+            - ls
+            - pwd
+            - popd
+            - pwd
+            - ls
             
