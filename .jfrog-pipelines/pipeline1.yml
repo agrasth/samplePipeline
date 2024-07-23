@@ -17,6 +17,6 @@ pipelines:
         #   inputResources:
         #     - name: resource_pipelines
         execution:
-          - onExecute:
-              - pushd $res_resource_pipelines_resourcePath
-              - ./script.sh # copy contents for script.sh file
+          onExecute:
+            - pushd $res_resource_pipelines_resourcePath
+            - ./script.sh # copy contents for script.sh file
