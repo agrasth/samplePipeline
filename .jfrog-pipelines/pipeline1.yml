@@ -1,9 +1,3 @@
-resources:
-  - name: resource_pipelines
-    type: GitRepo
-    configuration:
-      gitProvider: agrasth #rename to your integration name
-      path: agrasth/samplePipeline #rename to your repo name
 pipelines:
   - name: test
     configuration:
