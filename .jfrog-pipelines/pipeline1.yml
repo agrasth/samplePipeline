@@ -11,10 +11,7 @@ pipelines:
             - pushd $res_resource_pipelines_resourcePath
             - pwd
             - ls
-            - popd
-            - ls
-            - pwd
-            - popd
-            - pwd
-            - ls
+            - pushd test
+            - ./script.sh
+            
             
