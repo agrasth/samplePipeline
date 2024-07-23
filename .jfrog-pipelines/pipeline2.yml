@@ -1,29 +1,29 @@
-resources:
- - name: resource_pipelines
-   type: GitRepo
-   configuration:
-     gitProvider: agrasth #rename to your integration name
-     path: agrasth/samplePipeline #rename to your repo name 
+# resources:
+#  - name: resource_pipelines
+#    type: GitRepo
+#    configuration:
+#      gitProvider: agrasth #rename to your integration name
+#      path: agrasth/samplePipeline #rename to your repo name 
 
-pipelines:
-  - name: pipelines_build
-    configuration:
-      # Set the inputResources conditionally based on the branch
-      {{ if eq "master" "{{gitBranch}}" }}
-      inputResources:
-        - name: resource_pipelines
-          trigger: true
-      {{ else }}
-      inputResources:
-        - name: resource_pipelines
-          trigger: false
-      {{ end }}
-    steps:
-      - name: execute_script
-        type: Bash
-        configuration:
-          inputResources:
-            - name: resource_pipelines
-          execution:
-            onExecute:
-              - echo "hello world"
+# pipelines:
+#   - name: pipelines_build
+#     configuration:
+#       # Set the inputResources conditionally based on the branch
+#       {{ if eq "master" "{{gitBranch}}" }}
+#       inputResources:
+#         - name: resource_pipelines
+#           trigger: true
+#       {{ else }}
+#       inputResources:
+#         - name: resource_pipelines
+#           trigger: false
+#       {{ end }}
+#     steps:
+#       - name: execute_script
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: resource_pipelines
+#           execution:
+#             onExecute:
+#               - echo "hello world"
