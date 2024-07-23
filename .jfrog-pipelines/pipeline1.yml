@@ -6,17 +6,16 @@ resources:
       path: agrasth/samplePipeline #rename to your repo name
 pipelines:
   - name: test
-    # type: Bash
     configuration:
       inputResources:
         - name: resource_pipelines
     steps:
       - name: execute_script
         type: Bash
-        # configuration:
-        #   inputResources:
-        #     - name: resource_pipelines
         execution:
           onExecute:
             - pushd $res_resource_pipelines_resourcePath
+            - pwd
             - ./script.sh # copy contents for script.sh file
+            - popd
+            
