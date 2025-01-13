@@ -6,6 +6,7 @@ pipelines:
         configuration:
           inputResources:
             - name: resource_pipelines
+              trigger: false
         execution:
           onExecute:
             - pushd $res_resource_pipelines_resourcePath
